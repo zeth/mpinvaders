@@ -122,8 +122,8 @@ class Game:
         """Run the game."""
         i = 0
         wave = 200
-        wiggle = 20
-        while 1:
+        wiggle = 80
+        while wave > 20:
             self.show()
             if button_a.was_pressed():
                 self.move_cannon()
@@ -133,14 +133,15 @@ class Game:
             self.update_sky()
             self.update_bullet()
             i += 1
-            if i % 20 == 0:
+            if i % wiggle == 0:
                 self.invaders_move()
             if i == wave:
                 if self.drop_invaders() == -1:
                     break
                 i = 0
                 wave -= 1
-                wiggle -= 1
+                if wiggle > 20:
+                    wiggle -= 5
 
 def main():
     """Run on start."""

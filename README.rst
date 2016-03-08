@@ -29,3 +29,5 @@ https://microbit-micropython.readthedocs.org/en/latest/
 
 I hogged all the memory I could. I would love to hear about any ways
 to re-factor the game's code to make it more RAM efficient.
+
+WARNING THIS GAME CONTAINS FLASHING LIGHTS!
